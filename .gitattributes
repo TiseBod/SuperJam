@@ -1,0 +1,5 @@
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
+SuperJam/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+SuperJam/Library/PackageCache/com.unity.burst@616862665d8c/.Runtime/hostmac/dsymutil filter=lfs diff=lfs merge=lfs -text
