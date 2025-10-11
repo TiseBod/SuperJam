@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="122985b6-0c71-4097-8cf9-cfa89f925a9b" name="Changes" comment="" />
+    <list default="true" id="122985b6-0c71-4097-8cf9-cfa89f925a9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestartTraps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartTraps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Daruja.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Daruja.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/endCubeMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/endCubeMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/materials/floordemo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/floordemo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +27,13 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jamo move/JamoMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RestartTraps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/pulseRocket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StartTrial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TrackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -35,6 +53,8 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -127,6 +147,11 @@
       <workItem from="1750371369348" duration="4500000" />
       <workItem from="1750629834080" duration="10540000" />
       <workItem from="1751167011854" duration="838000" />
+      <workItem from="1755799518158" duration="11478000" />
+      <workItem from="1755872622195" duration="719000" />
+      <workItem from="1755898707537" duration="9797000" />
+      <workItem from="1756145795137" duration="3015000" />
+      <workItem from="1759152944587" duration="5519000" />
     </task>
     <servers />
   </component>

@@ -10,15 +10,15 @@ public class endCubeMessage : NpcSystem
 
         if (time < 0.40f)
         {
-            dialog = "Wow you're pretty quick aren't you? Feel free to meet up with Mr Hudson, if you pass the patience trial that is...";
+            lines[0] = "Wow you're pretty quick aren't you? Feel free to meet up with Mr Hudson, if you pass the patience trial that is...";
         }
         else if (time < 0.60f)
         {
-            dialog = "Applicant #110, you've passed the exam, however... on assignments you must have more skill in order to succeed.";
+            lines[0] = "Applicant #110, you've passed the exam, however... on assignments you must have more skill in order to succeed.";
         }
         else
         {
-            dialog = $"Applicant #110, you have failed this trial. To become an agent, you have to be faster. Try again next time. Time: {time:F2}s";
+            lines[0] = $"Applicant #110, you have failed this trial. To become an agent, you have to be faster. Try again next time. Time: {time:F2}s";
         }
     }
 
@@ -26,23 +26,25 @@ public class endCubeMessage : NpcSystem
     {
         if (player_detection)
         {
-            dialogText.text = dialog;
+          //  dialogText.text = lines;
         }
 
         base.Update();
+        SetDialogBasedOnTime();
     }
 
-    public virtual void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
         if (other.CompareTag("Player"))
         {
             player_detection = true;
             timer.StopTimer();  // optional: stop time when player finishes
-            SetDialogBasedOnTime();
+          //  SetDialogBasedOnTime();
         }
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    public override void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChangingRoom.unity
     guid: e1f3b7f2303712a409b3c740ae57ad8e
+  - enabled: 1
+    path: Assets/Scenes/Daruja.unity
+    guid: 838d4d5d5919f0f4bb1d033dca0c96e4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

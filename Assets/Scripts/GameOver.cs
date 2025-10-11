@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     public double border = -10;
     public bool timerActive;
     public GameObject timerObject;
+    public bool trapActive = false;
     void Awake()
     {
         // menu = GameObject.Find("Menu");
@@ -49,17 +50,46 @@ public class GameOver : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             
         }
+
+       
     }
 
     public void RestartGame()
     {
+        Time.timeScale = 1f;
         gameOverOpen = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(currentScene.buildIndex);
+        Debug.Log("Game Over clicked");
     }
 
     public void goHome()
     {
+        Time.timeScale = 1f;
        gameOverOpen = false;
+       Time.timeScale = 1f;
         SceneManager.LoadScene("Home-Interior");
     }
+
+    public void Debuggingbutton()
+    {
+        Debug.Log("Game Over clicked");
+    }
+
+    /*public void forceGameOver(bool open)
+    {
+        if (open)
+        {
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }else if (!open)
+        {
+            Time.timeScale = 1;
+            gameOverPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }*/
+    
+    
 }

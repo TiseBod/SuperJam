@@ -7,23 +7,30 @@ public class RestartTraps : MonoBehaviour
     
     
     Scene currentScene;
+   
+    public GameOver gameOver;
+    public bool gameOverOpen;
     void Start()
     {
-        currentScene = SceneManager.GetActiveScene();
-        
+        //currentScene = SceneManager.GetActiveScene();
+     //   gameOverPanel = GameObject.Find("gameOverPanel");
+        gameOver = GameObject.Find("GameOverCanvas").GetComponent<GameOver>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene(currentScene.buildIndex);
+            gameOverOpen = true;
+            gameOver.gameOverOpen = true;
+            //SceneManager.LoadScene(currentScene.buildIndex);
         }
     }
 }

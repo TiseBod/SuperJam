@@ -40,14 +40,15 @@ public class MovementScript : MonoBehaviour
 
     private bool isJumpPressed = false;
     private float initialJumpVelocity;
-    private float maxJumpVelocity;
-    private float maxJumpHeight = 4.0f;
-    private float maxJumptime = 0.75f;
+    public float maxJumpVelocity;
+    public float maxJumpHeight = 4.0f;
+    public float maxJumptime = 0.75f;
     float secondJumpHeight = 4.0f;
     bool isJumping = false;
     private bool isDoubleJumping = false;
     //private bool isFloating = false;
     private int isFloatingHash;
+    public float jellyMultiplier = 1;
     
     private AudioSource audioSource;
     [SerializeField] private AudioClip[] hitClip;
@@ -88,7 +89,7 @@ public class MovementScript : MonoBehaviour
       
     }
 
-    void setUpJumpVariables()
+    public void setUpJumpVariables()
     {
         float timeToApex = maxJumptime / 2;
         gravity = (-2*maxJumpHeight)/Mathf.Pow(timeToApex, 2);
@@ -109,7 +110,7 @@ public class MovementScript : MonoBehaviour
             
             
             Debug.Log($"Did I jump?  {initialJumpVelocity} value");
-            currentMovement.y = initialJumpVelocity * .5f;
+            currentMovement.y = initialJumpVelocity * .5f * jellyMultiplier;
            // gravityMovement.y += initialJumpVelocity;
         }else if (!isJumpPressed && isJumping && characterController.isGrounded)
         {
@@ -127,7 +128,7 @@ public class MovementScript : MonoBehaviour
            audioSource.clip = hitClip[1];
             audioSource.Play();
             
-            currentMovement.y = initialJumpVelocity * .75f;
+            currentMovement.y = initialJumpVelocity * .75f * jellyMultiplier;
         }else if(!isJumpPressed && isDoubleJumping && characterController.isGrounded)
         {
             isDoubleJumping = false;
@@ -314,6 +315,12 @@ public class MovementScript : MonoBehaviour
     void OnEnable()
     {
         playerInput.CharacterControls.Enable();
+    }
+
+    public void JumpModify(float multiplier)
+    {
+        maxJumpHeight = maxJumpHeight*multiplier;
+        //maxJumptime = maxJumptime+multiplier;
     }
 
     void OnDisable()
