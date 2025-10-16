@@ -5,10 +5,12 @@ public class JellyBounce : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public MovementScript movementScript;
+    public float jellyBounceForce;
     public float standardJumpHeight;
     public float standardJumpTime;
     public float standardGravity;
     public bool isJellyBouncing;
+    
     
     void Start()
     {
@@ -58,7 +60,7 @@ public class JellyBounce : MonoBehaviour
         {
            isJellyBouncing = true;
            Debug.Log($"the gravity is {movementScript.gravity}");
-           movementScript.jellyMultiplier = 3f;
+           movementScript.jellyMultiplier = jellyBounceForce;
         }
     }
     

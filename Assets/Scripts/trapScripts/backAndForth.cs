@@ -23,7 +23,7 @@ public class backAndForth : MonoBehaviour
             float z = Mathf.PingPong(Time.time * speed, distance);
             float offset = reverse ? (distance - z) : z;
             transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z + offset);
-        }else if(yDirection && !xDirection && !yDirection) {
+        }else if(yDirection && !xDirection && !zDirection) {
             
             float y = Mathf.PingPong(Time.time * speed, distance);
             float offset = reverse ? (distance - y) : y;

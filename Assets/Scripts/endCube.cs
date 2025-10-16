@@ -8,8 +8,9 @@ public class endCube : MonoBehaviour
     public StartTrial startTrial;
     public bool eventTriggered = false;
     void Start()
-    {
-        
+    { 
+        timer = GameObject.FindWithTag("timerCanvas").GetComponent<Timer>();
+        startTrial = GameObject.FindWithTag("timeStarter").GetComponent<StartTrial>();
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class endCube : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             //timer.StopTimer();
             eventTriggered = true;

@@ -53,8 +53,10 @@ public class MovementScript : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip[] hitClip;
     
+    // cooldown Checker
+    public CooldownManager cooldownManager;
     
-    
+    public bool hasSlowFallHappened = false;
 
     void Awake()
     {
@@ -86,7 +88,8 @@ public class MovementScript : MonoBehaviour
 
     private void Start()
     {
-      
+        cooldownManager = GameObject.Find("CoolDownPanel").GetComponent<CooldownManager>();
+
     }
 
     public void setUpJumpVariables()
@@ -224,10 +227,21 @@ public class MovementScript : MonoBehaviour
         float fallMultiplier;
         if (isDoubleJumping && isFalling && Input.GetKey(KeyCode.C))
         {
-            fallMultiplier = 0.3f;
-            Debug.Log("floating");
-            animator.SetBool(isFloatingHash, true);
-            
+            if (cooldownManager != null && cooldownManager.SlowfallActivated())
+            {
+                fallMultiplier = 0.3f;
+                Debug.Log("floating");
+                animator.SetBool(isFloatingHash, true);
+            }
+            else
+            {
+                fallMultiplier = 1.5f;
+            }
+
+
+
+           // hasSlowFallHappened = true;
+          
         }
         else
         {
@@ -242,8 +256,13 @@ public class MovementScript : MonoBehaviour
        
         if (characterController.isGrounded && currentMovement.y < 0f)
         {
+            //for slow fall cooldown
+         /*   if (hasSlowFallHappened)
+            {
+                slowfallActivated = true;
+            }*/
             
-        
+            hasSlowFallHappened = false;
             if (isJumpAnimating)
             {
                 animator.SetBool(isJumpingHash, false);
@@ -251,6 +270,9 @@ public class MovementScript : MonoBehaviour
                
                 
                 isJumpAnimating = false;
+                
+                
+                
             }
 
             currentMovement.y = groundedGravity;

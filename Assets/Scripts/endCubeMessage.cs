@@ -3,6 +3,12 @@ using UnityEngine;
 public class endCubeMessage : NpcSystem
 {
     public Timer timer;
+    public bool alternateText;
+
+    void Start()
+    {
+        timer = GameObject.FindWithTag("timerCanvas").GetComponent<Timer>();
+    }
 
     void SetDialogBasedOnTime()
     {
@@ -10,15 +16,21 @@ public class endCubeMessage : NpcSystem
 
         if (time < 0.40f)
         {
-            lines[0] = "Wow you're pretty quick aren't you? Feel free to meet up with Mr Hudson, if you pass the patience trial that is...";
+            if (!alternateText)
+            {
+                lines[0] = $"Wow you're pretty quick aren't you? Thank you for playing this demo! Time: {time:F2}s";
+            }
+            
         }
         else if (time < 0.60f)
         {
-            lines[0] = "Applicant #110, you've passed the exam, however... on assignments you must have more skill in order to succeed.";
+            if (!alternateText)
+             lines[0] = $"Thank you for playing this demo! Time: {time:F2}s";
         }
         else
         {
-            lines[0] = $"Applicant #110, you have failed this trial. To become an agent, you have to be faster. Try again next time. Time: {time:F2}s";
+            if (!alternateText)
+             lines[0] = $"Thank you for playing this demo! You can go even faster: {time:F2}s";
         }
     }
 

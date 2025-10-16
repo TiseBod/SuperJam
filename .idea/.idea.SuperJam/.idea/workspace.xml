@@ -5,19 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="122985b6-0c71-4097-8cf9-cfa89f925a9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestartTraps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartTraps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Daruja.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Daruja.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoVariants.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoVariants.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlantMat1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlantMat1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home-Interior.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home-Interior.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JellyBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JellyBounce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/combat/ShootPulse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/combat/ShootPulse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/endCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/endCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/endCubeMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/endCubeMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/endCubeMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/endCubeMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/materials/floordemo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/materials/floordemo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/trapScripts/backAndForth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/trapScripts/backAndForth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Mobile_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Mobile_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +48,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jamo move/JamoMove.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RestartTraps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/pulseRocket.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StartTrial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TrackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/thirdPersonDash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/controlContextScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@920b46832575/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@24b10291b18f/Runtime/TMP/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -152,6 +165,15 @@
       <workItem from="1755898707537" duration="9797000" />
       <workItem from="1756145795137" duration="3015000" />
       <workItem from="1759152944587" duration="5519000" />
+      <workItem from="1760192833299" duration="596000" />
+      <workItem from="1760194852052" duration="3083000" />
+      <workItem from="1760209236733" duration="8878000" />
+      <workItem from="1760327513999" duration="1269000" />
+      <workItem from="1760329047291" duration="4619000" />
+      <workItem from="1760369913675" duration="16600000" />
+      <workItem from="1760456830766" duration="12112000" />
+      <workItem from="1760482162507" duration="3116000" />
+      <workItem from="1760542493546" duration="4278000" />
     </task>
     <servers />
   </component>

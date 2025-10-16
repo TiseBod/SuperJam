@@ -1,72 +1,62 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class ShootPulse : MonoBehaviour
 {
-    
-    public GameObject cannon; // Prefab of the magic bomb
-    public Transform pulseCrystal;       // Reference to the wand transform
-    public float speed = 50f;   // Speed of the magic bomb
+    public GameObject cannon;             // Prefab of the magic bomb
+    public Transform pulseCrystal;        // Reference to wand transform
+    public float speed = 50f;             // Projectile speed
     public float evaporateTime = 3f;
 
-    public float attackRate = 0.1f;
-    public float nextPulseTime = 0f;
-    Animator animator;
+    public float attackRate = 0.5f;       // Minimum time between shots
+    private float nextPulseTime = 0f;
+
+    private Animator animator;
     private AudioSource audioSource;
-    //private int isPunchingHash;
     [SerializeField] private AudioClip[] hitClip;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-    
-    private void Awake()
+    public CooldownManager cooldownManager;  // Reference to cooldown manager
+
+    void Awake()
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-       // isPunchingHash = Animator.StringToHash("isPunching");
+        cooldownManager = GameObject.Find("CoolDownPanel").GetComponent<CooldownManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-       OnPunch();
-
+        OnPunch();
     }
-    
+
     void OnPunch()
     {
-        //bool isPunching = animator.GetBool(isPunchingHash);
-        if(Input.GetButton("punch")){
-            if (Time.time >= nextPulseTime)
+        if (Input.GetButtonDown("punch") && Time.time >= nextPulseTime)
+        {
+            // Ask cooldown manager if we can shoot
+            if (cooldownManager != null && cooldownManager.TryShootPulse())
             {
-                //animator.SetBool(isPunchingHash, true);
-                animator.SetTrigger("Punch");
-                audioSource.clip = hitClip[0];
-                audioSource.Play();
                 ShootPulseCannon();
-                nextPulseTime = Time.time + 1f/attackRate;
+                nextPulseTime = Time.time + attackRate;
 
-                
+                // Play animation & sound
+                animator.SetTrigger("Punch");
+                if (hitClip.Length > 0)
+                {
+                    audioSource.clip = hitClip[0];
+                    audioSource.Play();
+                }
             }
         }
-        
-       
     }
-
 
     void ShootPulseCannon()
     {
         GameObject pulse = Instantiate(cannon, pulseCrystal.position, pulseCrystal.rotation);
-        
         Rigidbody rb = pulse.GetComponent<Rigidbody>();
-
         if (rb != null)
         {
-            rb.AddForce(pulseCrystal.forward * speed, ForceMode.Impulse); 
+            rb.AddForce(pulseCrystal.forward * speed, ForceMode.Impulse);
         }
-        
         Destroy(pulse, evaporateTime);
     }
 }

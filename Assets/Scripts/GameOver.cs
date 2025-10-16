@@ -7,18 +7,23 @@ public class GameOver : MonoBehaviour
 
     public GameObject gameOverPanel;
     public bool gameOverOpen;
+    public GameObject pauseMenu;
     public Scene currentScene;
     public GameObject tracker;
     public double border = -10;
     public bool timerActive;
     public GameObject timerObject;
     public bool trapActive = false;
+    public GameObject victoryPanel;
     void Awake()
     {
         // menu = GameObject.Find("Menu");
         currentScene = SceneManager.GetActiveScene();
         tracker = GameObject.FindGameObjectWithTag("tracker");
         timerObject = GameObject.FindGameObjectWithTag("timer");
+        pauseMenu = GameObject.Find("PausePanel");
+        victoryPanel = GameObject.Find("VictoryPanel");
+        
        
        Time.timeScale = 1;
 
@@ -37,21 +42,30 @@ public class GameOver : MonoBehaviour
             //SceneManager.LoadScene(currentScene.buildIndex);
         }
 
-        if (gameOverOpen)
+        if (gameOverOpen && !pauseMenu.activeSelf &&  !victoryPanel.activeSelf)
         {
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             if(timerActive)timerObject.SetActive(false);
-        }else if (!gameOverOpen)
+        }else if (!gameOverOpen && !pauseMenu.activeSelf &&  !victoryPanel.activeSelf)
         {
             Time.timeScale = 1;
             gameOverPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             
+        }else if (pauseMenu.activeSelf || victoryPanel.activeSelf)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+        }else if (!pauseMenu.activeSelf || !victoryPanel.activeSelf)
+        {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            
         }
 
-       
+
     }
 
     public void RestartGame()

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - tracker
   - timer
+  - timerCanvas
+  - timeStarter
   layers:
   - Default
   - TransparentFX

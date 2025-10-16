@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class barrierCreate : MonoBehaviour
@@ -11,22 +12,32 @@ public class barrierCreate : MonoBehaviour
     
     
     
-    
+    public CooldownManager cooldownManager;
 
+
+    private void Awake()
+    {
+        cooldownManager = GameObject.Find("CoolDownPanel").GetComponent<CooldownManager>();
+    }
 
     void onMake()
     {
         
-        if(Input.GetKeyDown(KeyCode.E)){
-            if (Time.time >= nextPulseTime)
+        if(Input.GetKeyDown(KeyCode.E) && Time.time >= nextPulseTime){
+
+            if (cooldownManager != null && cooldownManager.barrierCreated())
             {
-                //animator.SetBool(isPunchingHash, true);
-                
                 barrierMake();
                 nextPulseTime = Time.time + 1f/attackRate;
-
-                
             }
+
+
+
+            //animator.SetBool(isPunchingHash, true);
+            
+                
+                
+            
         }
     }
 
