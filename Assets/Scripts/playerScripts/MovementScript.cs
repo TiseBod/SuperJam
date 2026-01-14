@@ -1,8 +1,11 @@
 using System;
+using System.Collections;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
+using UnityEngine.VFX;
 
 public class MovementScript : MonoBehaviour
 {
@@ -11,7 +14,7 @@ public class MovementScript : MonoBehaviour
     Vector2 currentMovementInput;
     Vector3 currentMovement;
     bool isMovementPressed;
-    CharacterController characterController;
+    public CharacterController characterController;
     Animator animator;
     private float rotationFactorPerFrame = 10f;
     private bool isRunPressed;
@@ -57,7 +60,31 @@ public class MovementScript : MonoBehaviour
     public CooldownManager cooldownManager;
     
     public bool hasSlowFallHappened = false;
+    
+    //knockback
+    public bool isKnockbackActive = false;
+    private float knockbackTimer;
 
+    private float knockbackForceMovement = 1;
+    
+    
+    //Dash
+    public float dashAmount = 4f;
+    [SerializeField]public bool dashActive = false;
+    private bool isDashing = false;
+    public float dashCooldownTime;
+    public float dashDuration;
+    
+    public delegate void DashDelegate(bool isDashing);
+    public static event DashDelegate OnDash;
+    //other scripts
+    
+    //VFX player
+    [FormerlySerializedAs("vfx1")] public VisualEffect JumpVFX;
+    [FormerlySerializedAs("vfx2")] public VisualEffect DoubleJumpVFX;
+    public VisualEffect DashVFX;
+    public VisualEffect SlowFallVFX;
+ 
     void Awake()
     {
         mainCameraTransform = Camera.main.transform;
@@ -68,7 +95,8 @@ public class MovementScript : MonoBehaviour
         isFloatingHash = Animator.StringToHash("isFloating");
         playerInput = new PlayerInput();
         characterController = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+      
 
         playerInput.CharacterControls.Move.started += onMovementInput;
         playerInput.CharacterControls.Move.canceled += onMovementInput;
@@ -110,6 +138,7 @@ public class MovementScript : MonoBehaviour
             isJumpAnimating = true;
             audioSource.clip = hitClip[0];
             audioSource.Play();
+            JumpVFX.Play();
             
             
             Debug.Log($"Did I jump?  {initialJumpVelocity} value");
@@ -123,13 +152,16 @@ public class MovementScript : MonoBehaviour
 
     void handleDoubleJump()
     {
-        if (isJumping && Input.GetButton("Fire1") && !isDoubleJumping && !characterController.isGrounded)
+        if (isJumping && Input.GetKeyDown(KeyCode.Space) && !isDoubleJumping && !characterController.isGrounded)
         {
+            JumpVFX.Stop();
             isDoubleJumping = true;
             Debug.Log("double jumps");
             animator.SetBool(isDoubleJumpingHash,true);
            audioSource.clip = hitClip[1];
-            audioSource.Play();
+           audioSource.Play();
+            DoubleJumpVFX.Play();
+           
             
             currentMovement.y = initialJumpVelocity * .75f * jellyMultiplier;
         }else if(!isJumpPressed && isDoubleJumping && characterController.isGrounded)
@@ -232,6 +264,7 @@ public class MovementScript : MonoBehaviour
                 fallMultiplier = 0.3f;
                 Debug.Log("floating");
                 animator.SetBool(isFloatingHash, true);
+                SlowFallVFX.Play();
             }
             else
             {
@@ -310,18 +343,98 @@ public class MovementScript : MonoBehaviour
     void move()
     {
         Vector3 horizontalMovement = Vector3.zero;
+        float yMovement = currentMovement.y;
+       
+        Vector3 moveDir = Quaternion.Euler(0f, targetRotationAngle, 0f) * Vector3.forward;
+        
+        //Logic for movement pressed
+        horizontalMovement = MovementPressedModifier(horizontalMovement, moveDir);
+        // logic for knockBack invocation
+        horizontalMovement = KnockbackModifier(horizontalMovement, moveDir, ref yMovement);
+        
+        //logic for dashing
+       
+        if (!dashActive &&  Input.GetKey(KeyCode.R) && cooldownManager.DashActivated())
+        {
+            
+            horizontalMovement += moveDir*dashAmount;
+            yMovement = 0;
+            
+            //dash animator
+            isDashing = true;
+            animator.SetBool("isDashing", isDashing);
+            OnDash?.Invoke(isDashing);
+            StartCoroutine(ResetDashTime());
+            StartCoroutine(ResetDashCooldown());
+            DashVFX.Play();
+        }
+        
+        Vector3 totalMovement = horizontalMovement + new Vector3(0f, yMovement, 0f);
+        characterController.Move(totalMovement * Time.deltaTime);
+    }
 
+    private IEnumerator ResetDashTime()
+    {
+       
+        yield return new WaitForSeconds(dashDuration);
+        if (Input.GetKey(KeyCode.R))
+            dashActive = true;
+        isDashing = false;
+        animator.SetBool("isDashing", isDashing);
+        OnDash?.Invoke(isDashing);
+        {
+        }
+
+      
+    }
+    
+    private IEnumerator ResetDashCooldown()
+    {
+       
+        yield return new WaitForSeconds(dashCooldownTime);
+        dashActive = false;
+    }
+
+   
+
+    private Vector3 KnockbackModifier(Vector3 horizontalMovement, Vector3 moveDir, ref float yMovement)
+    {
+        if(isKnockbackActive)
+        {
+           
+            horizontalMovement -=  moveDir * knockbackForceMovement;
+            Debug.Log(horizontalMovement);
+            yMovement += knockbackForceMovement;
+            
+            StartCoroutine(ResetKnockback());
+        }
+
+        return horizontalMovement;
+    }
+
+    private Vector3 MovementPressedModifier(Vector3 horizontalMovement, Vector3 moveDir)
+    {
         if (isMovementPressed)
         {
-            Vector3 moveDir = Quaternion.Euler(0f, targetRotationAngle, 0f) * Vector3.forward;
             float speed = isRunPressed ? runMultiplier : walkMultiplier;
             horizontalMovement = moveDir * speed;
         }
 
-        Vector3 totalMovement = horizontalMovement + new Vector3(0f, currentMovement.y, 0f);
-        characterController.Move(totalMovement * Time.deltaTime);
+        return horizontalMovement;
     }
 
+    void AddKnockback(float knockbackForce)
+    {
+        knockbackForceMovement = knockbackForce;
+        Debug.Log("add knockback called");
+        isKnockbackActive = true;
+    }
+
+    IEnumerator ResetKnockback()
+    {
+        yield return new WaitForSeconds(0.6f);
+        isKnockbackActive = false;
+    }
 
     void Update()
     {
@@ -337,6 +450,7 @@ public class MovementScript : MonoBehaviour
     void OnEnable()
     {
         playerInput.CharacterControls.Enable();
+        ShootPulse.OnKnockback += AddKnockback;
     }
 
     public void JumpModify(float multiplier)

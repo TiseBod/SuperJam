@@ -6,23 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JamoDemo.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Starter.unity
+    guid: aee5bfe30474a9947bcd5bcb90690d3f
   - enabled: 1
+    path: Assets/Scenes/colorSelect.unity
+    guid: b04fb0417fb8748499ecb74e38b3dc3c
+  - enabled: 1
+    path: Assets/Scenes/tutorial.unity
+    guid: 2f6a2830c9721ad42aad7664e5c4e5a8
+  - enabled: 1
+    path: Assets/Scenes/cloud rush.unity
+    guid: 8f5ef4064f9d59c40a47e60818c4384e
+  - enabled: 1
+    path: Assets/Scenes/JamoDemo 1.unity
+    guid: 82445e6b0dd66ca45bd818297a8b811f
+  - enabled: 0
     path: Assets/Scenes/Home.unity
     guid: 7db49b86976df9840bf898ffed0d9845
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Home-Interior.unity
     guid: 6e871c4ac83430240972844b540d2c02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChangingRoom.unity
     guid: e1f3b7f2303712a409b3c740ae57ad8e
   - enabled: 0
     path: Assets/Scenes/Daruja.unity
     guid: 838d4d5d5919f0f4bb1d033dca0c96e4
-  - enabled: 1
-    path: Assets/Scenes/cloud rush.unity
-    guid: 8f5ef4064f9d59c40a47e60818c4384e
+  - enabled: 0
+    path: Assets/Scenes/JamoDemo.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

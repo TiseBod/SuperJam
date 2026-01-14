@@ -9,19 +9,21 @@ public class CooldownManager : MonoBehaviour
     public Image[] coolDownImages;       // Spark UI images
 
     public int maxSparks = 3;
-    public MovementInput movementInput;
+    public MovementScript movementScript;
     public int cooldownSparks;           // Current available sparks
     public int shootPulseCost = 1;
     public int barrierCost = 3;
     public int slowfallCost = 1;
+    public int dashCost = 1;
     public float coolDownRate = 1f;      // Time per spark recovery
-
+    public bool allowSlowFall = false;
+    public bool allowDash = false;
     private bool[] sparkActiveStates;
 
     void Start()
     {
         shootPulse = GameObject.FindGameObjectWithTag("Player").GetComponent<ShootPulse>();
-        movementInput = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementInput>();
+        movementScript = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementScript>();
         sparkActiveStates = new bool[maxSparks];
 
         // Initialize all sparks active
@@ -62,17 +64,54 @@ public class CooldownManager : MonoBehaviour
 
     public bool SlowfallActivated()
     {
-        if (cooldownSparks >= slowfallCost)
+        if (cooldownSparks >= slowfallCost || allowSlowFall)
         {
             
             if (Input.GetKeyDown(KeyCode.C))
             { 
                 UseSparks(slowfallCost);
+                allowSlowFall = true;
+                Debug.Log( "is player grounded: "+ movementScript.characterController.isGrounded);
+               
+            }
+            if (movementScript.characterController.isGrounded)
+            {
+                allowSlowFall = false;
             }
             return true;
             
         }
+        
+        
         return false;
+    }
+
+
+    public bool DashActivated()
+    {
+        if (cooldownSparks >= dashCost)
+        {
+            if (!allowDash)
+            {
+                UseSparks(dashCost);
+                StartCoroutine(DashDuration());
+            }
+           
+            return true;
+        }
+        
+        if(allowDash)
+        {
+            return true;
+        }
+        return false; // not enough sparks
+    }
+
+    IEnumerator DashDuration()
+    {
+        allowDash = true;
+        yield return new WaitForSecondsRealtime(movementScript.dashDuration);
+        allowDash = false;
     }
 
     void UseSparks(int cost)
@@ -114,6 +153,14 @@ public class CooldownManager : MonoBehaviour
                     break;
                 }
             }
+        }
+    }
+
+    void Update()
+    {
+        if (movementScript.characterController.isGrounded)
+        {
+            allowSlowFall = false;
         }
     }
 }

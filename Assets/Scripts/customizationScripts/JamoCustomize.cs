@@ -7,8 +7,9 @@ public class JamoCustomize : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private List<GameObject> Jamos;
     private int selectionIndex;
-    
-    
+    public string level;
+    public bool isMultipleSpawnPoints = false;
+   
     
     
     
@@ -64,16 +65,23 @@ public class JamoCustomize : MonoBehaviour
     }
 
 
-    public void Confirm(string entryPointName)
+    public void SceneChange(string spawnPointName)
     {
         PlayerPrefs.SetInt("JamoSelection", selectionIndex);
-        PlayerPrefs.SetString("EntryPoint", entryPointName);
-        SceneManager.LoadScene("Home-Interior");
+        if (isMultipleSpawnPoints)
+        {
+            PlayerPrefs.SetString("EntryPoint", spawnPointName);
+        }
+      
+        SceneManager.LoadScene(level);
     }
+    
+    
+    
 
     public void ConfirmSpawnpoint()
     {
-        Confirm("DefaultSpawnPoint");
+        SceneChange("DefaultSpawnPoint");
     }
 
   /*  public void ConfirmEntryPoint2(string entryPointName)
@@ -86,6 +94,9 @@ public class JamoCustomize : MonoBehaviour
 
     public void SecondConfirmEntryPoint()
     {
-        Confirm("EntryPoint2");
+        SceneChange("EntryPoint2");
     }
+    
+    
+    
 }

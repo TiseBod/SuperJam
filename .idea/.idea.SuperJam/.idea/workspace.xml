@@ -6,34 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="122985b6-0c71-4097-8cf9-cfa89f925a9b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoDefault.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoVariants.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Prefabs/JamoMovements/JamoVariants.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlantMat1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlantMat1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home-Interior.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home-Interior.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JamoDemo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JellyBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JellyBounce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/Palletes/dark color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/Palletes/dark color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/coffee-color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/coffee-color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/lattice floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/terrains/Sci-Fi Styled Modular Pack/Materials/lattice floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Animations/Tise's custom animations/JamoMove.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Animations/Tise's custom animations/JamoMove.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Materials/m_ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Materials/m_ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/PulseRocket/barrierModel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/PulseRocket/barrierModel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jamo/PulseRocket/pulse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Jamo/PulseRocket/pulse.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JamoDemo 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JamoDemo 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/cloud rush.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/cloud rush.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/combat/ShootPulse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/combat/ShootPulse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/endCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/endCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/endCubeMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/endCubeMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/combat/pulseRocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/combat/pulseRocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/customizationScripts/JamoCustomize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/customizationScripts/JamoCustomize.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/trapScripts/backAndForth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/trapScripts/backAndForth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Mobile_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Mobile_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VictoryMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VictoryMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/controlContextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/controlContextScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/coolDownManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/coolDownManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/title of Super Jam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/title of Super Jam.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.connect.share/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.connect.share/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +46,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/DashEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jammo-Character/Scripts/CharacterSkinController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jamo move/JamoCombatAnimations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jamo move/JamoMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Jamo/Jamo move/Wave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneTouchDelete.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameOver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JellyBounce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/ShootPulse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/barrierCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/combat/pulseRocket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/cursorLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/customizationScripts/JamoCustomize.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/endCube.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerScripts/MovementScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/trapScripts/backAndForth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VictoryMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/bonusTime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/controlContextScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/coolDownManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@920b46832575/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@24b10291b18f/Runtime/TMP/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@ba0fe1b085e9/Editor/Inspector/AdvancedVisualEffectEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -174,6 +192,24 @@
       <workItem from="1760456830766" duration="12112000" />
       <workItem from="1760482162507" duration="3116000" />
       <workItem from="1760542493546" duration="4278000" />
+      <workItem from="1762467420348" duration="64000" />
+      <workItem from="1762542265253" duration="522000" />
+      <workItem from="1762575753998" duration="5345000" />
+      <workItem from="1764215134796" duration="642000" />
+      <workItem from="1764626483786" duration="2205000" />
+      <workItem from="1764700025307" duration="2516000" />
+      <workItem from="1764827604906" duration="709000" />
+      <workItem from="1764946839206" duration="8750000" />
+      <workItem from="1766949816156" duration="4792000" />
+      <workItem from="1767568683098" duration="13197000" />
+      <workItem from="1767585428791" duration="2328000" />
+      <workItem from="1767914103007" duration="1121000" />
+      <workItem from="1767919910509" duration="3743000" />
+      <workItem from="1767985905698" duration="1872000" />
+      <workItem from="1768178127893" duration="5693000" />
+      <workItem from="1768250683413" duration="543000" />
+      <workItem from="1768274740885" duration="4258000" />
+      <workItem from="1768327713015" duration="2049000" />
     </task>
     <servers />
   </component>

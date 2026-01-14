@@ -13,6 +13,7 @@ public class VictoryMessage : MonoBehaviour
     public string nextScene;
   //  private Scene currentScene;
     private bool levelCleared = false;
+    public float messageDelay = 0.5f;
     void Start()
     {
        // gameOver = GameObject.Find("GameOverCanvas").GetComponent<GameOver>();
@@ -52,7 +53,7 @@ public class VictoryMessage : MonoBehaviour
 
     private IEnumerator LoadPanel()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(messageDelay);
         victoryPanel.SetActive(true);
         
     }

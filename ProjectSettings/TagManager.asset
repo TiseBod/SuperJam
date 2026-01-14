@@ -8,6 +8,7 @@ TagManager:
   - timer
   - timerCanvas
   - timeStarter
+  - movingPlatform
   layers:
   - Default
   - TransparentFX

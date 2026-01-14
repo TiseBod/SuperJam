@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class ShootPulse : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class ShootPulse : MonoBehaviour
     [SerializeField] private AudioClip[] hitClip;
 
     public CooldownManager cooldownManager;  // Reference to cooldown manager
+    public delegate void  KnockbackDelegate(float knockback);
+    public static  event KnockbackDelegate OnKnockback;
+    public float KnockbackPower;
+    public VisualEffect shootVFX;
 
     void Awake()
     {
@@ -36,6 +41,8 @@ public class ShootPulse : MonoBehaviour
             if (cooldownManager != null && cooldownManager.TryShootPulse())
             {
                 ShootPulseCannon();
+                OnKnockback?.Invoke(KnockbackPower);
+                shootVFX.Play();
                 nextPulseTime = Time.time + attackRate;
 
                 // Play animation & sound
